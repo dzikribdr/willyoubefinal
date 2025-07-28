@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>yay!</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 30px;
+      font-family: "Courier", monospace;
+      background-color: #ffe6eb;
+      background-image: radial-gradient(#ffccd5 1px, transparent 4px);
+      background-size: 20px 20px;
+      color: #ff9494;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .galleryRow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+      gap: 20px;
+      justify-items: center;
+      margin-top: 20px;
+      max-width: 700px; /* opsional, biar lebih rapih di tengah */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    /* Flip Card Styles */
+    .flip-card {
+      background-color: transparent;
+      width: 190px;
+      height: 254px;
+      perspective: 1000px;
+      font-family: sans-serif;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner,
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border: 1px solid #ff9494;
+      border-radius: 1rem;
+    }
+
+    .flip-card-front {
+      background: linear-gradient(
+        120deg,
+        #ff9494 60%,
+        #ffe7de 88%,
+        #ffd3c3 40%,
+        rgba(255, 127, 80, 0.3) 48%
+      );
+      color: #ff9494;
+    }
+
+    .flip-card-back {
+      background: linear-gradient(
+        120deg,
+        #ffae91 30%,
+        #ff9494 88%,
+        #ff9494 40%,
+        #ffb9a0 78%
+      );
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .title {
+      font-size: 1.5em;
+      font-weight: 900;
+      text-align: center;
+      margin: 0;
+    }
+
+    .arrow-down {
+      margin: 20px auto;
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-top: 35px solid #e60073;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .flip-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff9494;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .flip-btn:hover {
+      background-color: #e60073;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 24px; }
+      .flip-card { width: 150px; height: 200px; }
+      .arrow-down {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 25px solid #e60073;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>yay!! 🥰<br> see you soon my love!</h1>
+  <div class="arrow-down"></div>
+
+  <div class="galleryRow">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/potbar1.jpeg" alt="photo 1" style="width:100%; height:100%; border-radius: 1rem; object-fit: cover;">
+        </div>
+        <div class="flip-card-back">
+          <p class="title">I</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/potbar2.jpeg" alt="photo 2" style="width:100%; height:100%; border-radius: 1rem; object-fit: cover;">
+        </div>
+        <div class="flip-card-back">
+          <p class="title">Love</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/potbar3.jpeg" alt="photo 3" style="width:100%; height:100%; border-radius: 1rem; object-fit: cover;">
+        </div>
+        <div class="flip-card-back">
+          <p class="title">You</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/potbar4.jpeg" alt="photo 4" style="width:100%; height:100%; border-radius: 1rem; object-fit: cover;">
+        </div>
+        <div class="flip-card-back">
+          <p class="title">So</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/potbar5.jpeg" alt="photo 5" style="width:100%; height:100%; border-radius: 1rem; object-fit: cover;">
+        </div>
+        <div class="flip-card-back">
+          <p class="title">Much</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/potbar6.jpeg" alt="photo 6" style="width:100%; height:100%; border-radius: 1rem; object-fit: cover;">
+        </div>
+        <div class="flip-card-back">
+          <p class="title">Alenn</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flip All Button -->
+  <button class="flip-btn" onclick="flipAll()">Click ❤️</button>
+
+  <script>
+    let flipped = false;
+
+    function flipAll() {
+      flipped = !flipped;
+      document.querySelectorAll('.flip-card').forEach(card => {
+        card.classList.toggle('flipped', flipped);
+      });
+    }
+  </script>
+</body>
+</html>

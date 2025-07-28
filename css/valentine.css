@@ -1,0 +1,84 @@
+body {
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Courier", monospace;
+  background-color: #fff5e4;
+  color: #ff9494;
+}
+
+img {
+  height: 400px;
+  width: auto;
+  padding: 10px;
+}
+
+.responsive {
+  max-width: 80%;
+  height: auto;
+  margin-top: 20px;
+}
+
+#valentineQuestion {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.answerButton {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: "Courier", monospace;
+  background-color: #ffe3e1;
+  color: #e67373;
+  border-radius: 12px;
+  border: 2px solid #ffe3e1;
+  box-shadow: 1px 1px 2px #ff9494;
+  transition: all 0.3s ease-in-out;
+}
+
+.answerButton:hover {
+  background-color: #ff9494;
+  color: #ffe3e1;
+  border: 2px solid #ff9494;
+  box-shadow: 1px 1px 2px #ffe3e1;
+}
+
+.photoGallery {
+  margin-top: 40px;
+}
+
+.galleryRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.galleryRow img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+  #valentineQuestion {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .answerButton {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  img {
+    height: auto;
+    max-width: 90%;
+  }
+
+  .galleryRow img {
+    width: 100px;
+  }
+}
